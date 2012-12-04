@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/style.css" rel="stylesheet" media="screen">
+    <title>User Proto</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span2">
+                <ul class="nav nav-tabs nav-stacked">
+                    <li><a href="#/"><i class="icon-list-alt"></i> User list</a></li>
+                    <li><a href="#/new"><i class="icon-user"></i> New user</a></li>
+                </ul>
+            </div>
+            <div class="span10">
+                <div ng-view></div>
+            </div>
+        </div>
+    </div>
+    <script data-main="js/bootstrap.js" src="js/lib/require.js"></script>
+</body>
+</html>

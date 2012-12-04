@@ -1,0 +1,22 @@
+<article>
+    <div class="input-prepend">
+        <p><span class="add-on"><i class="icon-search"></i></span>
+        <input class="span4" ng-model="search" type="text" placeholder="Search filter..."></p>
+    </div>
+</article>
+<section>
+    <article ng-repeat="user in users | filter:search | orderBy:'firstName'" class="media">
+        <div class="pull-left">
+            <a href="#/edit/{{user._id.$oid}}" ng-show="user.photo">
+                <img ng-src="{{user.photo}}" class="media-object img-polaroid" width="75px">
+            </a>
+        </div>
+        <div class="media-body">
+            <a href="#/edit/{{user._id.$oid}}">
+                <h4 class="media-heading">{{user.firstName}} {{user.lastName}}</h4>
+            </a>
+            <p class="muted">{{user.position}}</p>
+            {{user.description}}
+        </div>
+    </article>
+</section>

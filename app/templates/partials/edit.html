@@ -1,0 +1,19 @@
+<form name="myForm">
+    <fieldset>
+    <legend>{{legend}}</legend>
+        <label>User Picture</label>
+        <input type="text" name="firstName" ng-model="user.photo">
+        <label>First name</label>
+        <input type="text" name="firstName" ng-model="user.firstName">
+        <label>Last name</label>
+        <input type="text" name="lastName" ng-model="user.lastName">
+        <label>Position</label>
+        <input type="text" name="position" ng-model="user.position">
+        <label>Description</label>
+        <textarea name="position" ng-model="user.description"></textarea>
+        <div>
+            <button ng-click="save()" ng-disabled="isClean()" type="submit" class="btn">Submit</button>
+            <button ng-click="destroy()" ng-show="user._id" class="btn btn-danger">Delete</button>
+        </div>
+    </fieldset>
+</form>
